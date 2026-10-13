@@ -1,0 +1,14 @@
+# Mô hình M1 – form tạo tài sản (POST /hardware)
+# Mỗi tham số đã được phân hoạch tương đương về các giá trị đại diện.
+
+Company:      Trong, CongTyCuaActor, CongTyKhac
+AssetModel:   CoFieldsetBatBuoc, CoFieldsetTuyChon, KhongFieldset
+Status:       Deployable, Pending, Undeployable, Archived
+Checkout:     Khong, User, Location, Asset
+Location:     Trong, CoGiaTri
+Supplier:     Trong, CoGiaTri
+PurchaseCost: Trong, HopLe, Am
+SoLuongTag:   1, Nhieu
+
+# Chỉ trạng thái Deployable mới được checkout ngay khi tạo.
+IF [Status] <> "Deployable" THEN [Checkout] = "Khong";
