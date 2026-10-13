@@ -1,0 +1,15 @@
+# Mô hình M2 – quyền checkout theo vai trò, FMCS, công ty, loại đối tượng và đích cấp phát
+
+VaiTro:      Superuser, AdminCoQuyenCheckout, UserKhongQuyen
+FMCS:        Bat, Tat
+QuanHeCty:   CungCongTy, KhacCongTy
+LoaiDoiTuong: Asset, License, Accessory, Consumable, Component
+DichCapPhat: User, Location, Asset
+
+# Ràng buộc lấy từ các controller checkout tương ứng:
+#   LicenseCheckoutController    – chỉ assigned_user hoặc assigned_asset
+#   ConsumableCheckoutController – chỉ assigned_user
+#   ComponentCheckoutController  – bắt buộc asset_id
+IF [LoaiDoiTuong] = "License"    THEN [DichCapPhat] <> "Location";
+IF [LoaiDoiTuong] = "Consumable" THEN [DichCapPhat] = "User";
+IF [LoaiDoiTuong] = "Component"  THEN [DichCapPhat] = "Asset";

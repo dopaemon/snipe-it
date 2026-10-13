@@ -1,0 +1,17 @@
+VaiTro	FMCS	QuanHeCty	LoaiDoiTuong	DichCapPhat
+Superuser	Bat	CungCongTy	Asset	User
+Superuser	Tat	KhacCongTy	License	Asset
+AdminCoQuyenCheckout	Bat	KhacCongTy	Accessory	Location
+AdminCoQuyenCheckout	Tat	CungCongTy	Consumable	User
+UserKhongQuyen	Bat	CungCongTy	Component	Asset
+UserKhongQuyen	Tat	KhacCongTy	Asset	Location
+Superuser	Tat	CungCongTy	Accessory	Location
+UserKhongQuyen	Bat	CungCongTy	License	User
+Superuser	Bat	KhacCongTy	Consumable	User
+AdminCoQuyenCheckout	Tat	KhacCongTy	Component	Asset
+AdminCoQuyenCheckout	Bat	CungCongTy	Asset	Asset
+UserKhongQuyen	Bat	CungCongTy	Accessory	User
+Superuser	Bat	CungCongTy	Accessory	Asset
+Superuser	Bat	CungCongTy	Component	Asset
+AdminCoQuyenCheckout	Bat	CungCongTy	License	User
+UserKhongQuyen	Bat	CungCongTy	Consumable	User
