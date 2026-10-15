@@ -1,0 +1,13 @@
+# Mô hình PICT mở rộng cho Quyền Checkoutable (M2)
+# Người lập: Nguyễn Ngọc Hân (Ericismee)
+
+VaiTro: Superuser, AdminCoQuyen, UserKhongQuyen
+FMCS: Bat, Tat
+CongTy: CungCongTy, KhacCongTy
+LoaiDT: Asset, License, Accessory, Consumable, Component
+Dich: User, Location, Asset
+
+# Ràng buộc đối tượng đích hợp lệ theo từng loại thực thể
+IF [LoaiDT] = "License" THEN [Dich] IN {"User", "Asset"};
+IF [LoaiDT] = "Consumable" THEN [Dich] = "User";
+IF [LoaiDT] = "Component" THEN [Dich] = "Asset";

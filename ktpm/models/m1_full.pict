@@ -1,0 +1,14 @@
+# Mô hình PICT mở rộng cho Form tạo Asset (M1)
+# Người lập: Nguyễn Ngọc Hân (Ericismee)
+
+Company: Trong, CungCongTy, CongTyKhac
+Model: FieldsetBatBuoc, FieldsetTuyChon, KhongFieldset
+Status: Deployable, Pending, Archived, Undeployable
+Checkout: Khong, User, Location, Asset
+Location: Trong, CoGiaTri
+Supplier: Trong, CoGiaTri
+Cost: Trong, HopLe, Am
+Tag: Mot, Nhieu
+
+# Ràng buộc: Chỉ trạng thái Deployable mới cho phép checkout ngay lúc tạo
+IF [Status] <> "Deployable" THEN [Checkout] = "Khong";
